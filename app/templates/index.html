@@ -8,10 +8,12 @@
     </head>
     <body>
         <h1>My Guestbook</h1>
-        <a href="create.html"> <button>Leave a note!</button> </a>
+        <a href="{% url 'create' %}"> <button>Leave a note!</button> </a>
         <div>
             {% for note in notes %}
             <p>{{ note.name }}</p>
+            <p>{{ note.message }}</p>
+            <p>{{ note.date }}</p>
 
             {% endfor %}
         </div>
