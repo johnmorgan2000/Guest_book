@@ -7,7 +7,9 @@
         <title>Guest Book</title>
     </head>
     <body>
-        <h1>My Guestbook</h1>
-        <a href="create.html"><button>Leave a note!</button></a>
+        <h1>Leave a note</h1>
+        <form method="POST" action="{% url 'create' %}">
+            {% csrf_token %} {{ create_form }} <button>Submit</button>
+        </form>
     </body>
 </html>
