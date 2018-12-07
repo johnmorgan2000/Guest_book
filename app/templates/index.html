@@ -8,6 +8,12 @@
     </head>
     <body>
         <h1>My Guestbook</h1>
-        <a href="create.html"><button>Leave a note!</button></a>
+        <a href="create.html"> <button>Leave a note!</button> </a>
+        <div>
+            {% for note in notes %}
+            <p>{{ note.name }}</p>
+
+            {% endfor %}
+        </div>
     </body>
 </html>
