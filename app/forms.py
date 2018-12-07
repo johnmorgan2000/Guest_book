@@ -1,6 +1,7 @@
 from django.forms import Form
 from django import forms
 
-# class (Form):
-#     num1 = forms.FloatField(label="Number 1:")
-#     num2 = forms.FloatField(label="Number 2:")
+
+class CreateForm(Form):
+    name = forms.CharField(label="Name")
+    message = forms.CharField(label="Message")
